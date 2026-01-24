@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: milkatai-scraper-bot
+Version: 0.1.0
+Summary: Scraper bots for MilkatAI
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: lxml==5.2.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: playwright==1.46.0
+Requires-Dist: pydantic==2.8.2
+Requires-Dist: python-dotenv==1.0.1
+
+## Scraper Bot
+
+Focused on AnyROR first; structured to add more targets later.
+
+### What it does
+- Attempts a static scrape with `requests` + `BeautifulSoup`
+- Falls back to a headless browser (Playwright) for dynamic content
+- Normalizes and stores extracted links + labels
+
+### Setup
+1) Create a virtualenv in `services/scraper-bot`
+2) Install dependencies:
+   - `pip install -e .`
+3) (Optional) Install Playwright browsers:
+   - `playwright install`
+
+### Run
+From `services/scraper-bot`:
+- `python -m scraper_bot.main --site anyror --mode auto --out ./data/anyror.json`
+
+### Output
+Writes JSON with:
+- source URL
+- extraction mode (static or browser)
+- document/link list with labels and hrefs
+*** End Patch}```
+
