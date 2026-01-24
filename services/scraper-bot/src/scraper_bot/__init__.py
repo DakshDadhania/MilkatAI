@@ -1,8 +1,3 @@
-__all__ = [
-    "config",
-    "logger",
-    "models",
-    "http_client",
-    "anyror_scraper",
-]
+"""MilkatAI Scraper Bot - Multi-website scraper for Gujarat government portals."""
 
+__version__ = "0.1.0"

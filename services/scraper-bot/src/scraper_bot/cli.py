@@ -1,13 +1,18 @@
+"""CLI entry point for the scraper bot."""
+
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
 
-from .anyror_scraper import AnyRORScrapeOptions, AnyRORScraper
-from .logger import get_logger
+from scraper_bot.core.logger import get_logger
+from scraper_bot.scrapers.anyror import AnyRORScraper, AnyRORScrapeOptions
 
 logger = get_logger("scraper_bot")
+
+# List of supported sites
+SUPPORTED_SITES = ["anyror"]
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -16,7 +21,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--site",
         type=str,
         default="anyror",
-        choices=["anyror"],
+        choices=SUPPORTED_SITES,
         help="Target site to scrape",
     )
     parser.add_argument(
@@ -43,6 +48,7 @@ def _write_output(output_path: Path, payload: dict) -> None:
 def main() -> None:
     parser = _build_parser()
     args = parser.parse_args()
+    
     if args.site == "anyror":
         scraper = AnyRORScraper()
         result = scraper.run(AnyRORScrapeOptions(mode=args.mode))
@@ -55,4 +61,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

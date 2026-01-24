@@ -16,4 +16,3 @@ class ScraperConfig:
 
 
 DEFAULT_CONFIG = ScraperConfig()
-

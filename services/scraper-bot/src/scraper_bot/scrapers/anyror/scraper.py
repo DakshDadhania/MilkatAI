@@ -7,10 +7,10 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-from .config import DEFAULT_CONFIG
-from .http_client import get_url
-from .logger import get_logger
-from .models import DocumentLink, ScrapeResult
+from scraper_bot.core.config import DEFAULT_CONFIG
+from scraper_bot.core.http_client import get_url
+from scraper_bot.core.logger import get_logger
+from scraper_bot.core.models import DocumentLink, ScrapeResult
 
 logger = get_logger("scraper_bot.anyror")
 
@@ -21,6 +21,8 @@ class AnyRORScrapeOptions:
 
 
 class AnyRORScraper:
+    """Scraper for AnyROR Gujarat (https://anyror.gujarat.gov.in/)."""
+
     def __init__(self, base_url: str = DEFAULT_CONFIG.anyror_base_url) -> None:
         self.base_url = base_url
 
@@ -79,4 +81,3 @@ class AnyRORScraper:
             absolute = urljoin(self.base_url, href)
             links.append(DocumentLink(label=text, href=absolute))
         return links
-
