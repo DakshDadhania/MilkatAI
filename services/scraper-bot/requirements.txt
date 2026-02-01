@@ -1,7 +1,15 @@
+# Web scraping
 beautifulsoup4==4.12.3
 lxml==5.2.2
 requests==2.32.3
 playwright==1.46.0
+
+# Data validation
 pydantic==2.8.2
+
+# Environment
 python-dotenv==1.0.1
 
+# API
+fastapi==0.115.0
+uvicorn[standard]==0.30.6

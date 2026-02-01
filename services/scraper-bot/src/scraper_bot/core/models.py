@@ -19,4 +19,3 @@ class ScrapeResult(BaseModel):
     mode: Literal["static", "browser"]
     documents: list[DocumentLink] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
-

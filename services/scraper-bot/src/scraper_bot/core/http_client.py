@@ -15,4 +15,3 @@ def get_url(url: str, timeout: int = 30) -> requests.Response:
     response = requests.get(url, headers=DEFAULT_HEADERS, timeout=timeout)
     response.raise_for_status()
     return response
-
