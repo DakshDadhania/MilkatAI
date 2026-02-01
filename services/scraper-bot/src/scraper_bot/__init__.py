@@ -4,5 +4,6 @@ __all__ = [
     "models",
     "http_client",
     "anyror_scraper",
+    "compare_pipeline",
 ]
 

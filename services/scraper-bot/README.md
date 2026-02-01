@@ -17,11 +17,12 @@ Focused on AnyROR first; structured to add more targets later.
 ### Run
 From `services/scraper-bot`:
 - `python -m scraper_bot.main --site anyror --mode auto --out ./data/anyror.json`
+- Optional compare: `python -m scraper_bot.main --site anyror --ocr ./data/ocr.txt --out ./data/anyror.json`
 
 ### Output
 Writes JSON with:
 - source URL
 - extraction mode (static or browser)
 - document/link list with labels and hrefs
-*** End Patch}```
+*** End Patch```
 

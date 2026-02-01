@@ -9,6 +9,9 @@ class DocumentLink(BaseModel):
     label: str
     href: str
     category: Optional[str] = None
+    doc_type: Optional[str] = None
+    region: Optional[str] = None
+    source_section: Optional[str] = None
 
 
 class ScrapeResult(BaseModel):
