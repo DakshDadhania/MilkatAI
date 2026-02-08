@@ -45,7 +45,7 @@ export function PaymentButton({ amount = 199900 }: PaymentButtonProps) {
         currency: payload.currency,
         name: "MilkatAI",
         description: "MilkatAI subscription",
-        theme: { color: "#111111" },
+        theme: { color: "#7c3aed" },
       });
 
       razorpay.open();
@@ -63,7 +63,7 @@ export function PaymentButton({ amount = 199900 }: PaymentButtonProps) {
         type="button"
         onClick={handlePayment}
         disabled={loading}
-        className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-zinc-800 disabled:opacity-60"
+        className="rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/30 transition hover:brightness-110 disabled:opacity-60"
       >
         {loading ? "Starting payment..." : t.app.dashboard.payButton}
       </button>

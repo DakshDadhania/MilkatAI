@@ -19,15 +19,15 @@ export function HowItWorks() {
           {t.howItWorks.steps.map((item, index) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm"
+              className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_-40px_rgba(59,130,246,0.45)] backdrop-blur"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 text-sm font-semibold text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/30">
                 {index + 1}
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-zinc-900">
+              <h3 className="mt-4 text-lg font-semibold text-white">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm text-zinc-600">{item.description}</p>
+              <p className="mt-2 text-sm text-slate-300">{item.description}</p>
             </div>
           ))}
         </div>

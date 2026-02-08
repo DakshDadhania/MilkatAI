@@ -8,9 +8,9 @@ export function Privacy() {
   const { t } = useI18n();
 
   return (
-    <section className="bg-zinc-900 py-20 text-white">
+    <section className="py-20 text-white">
       <Container>
-        <div className="rounded-3xl border border-white/10 bg-zinc-900/60 p-10">
+        <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-indigo-900/30 p-10 backdrop-blur">
           <SectionHeading
             eyebrow={t.privacy.eyebrow}
             title={t.privacy.title}
@@ -20,7 +20,7 @@ export function Privacy() {
             {t.privacy.tiles.map((tile) => (
               <div
                 key={tile}
-                className="rounded-2xl border border-white/10 p-4 text-sm text-white/80"
+                className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200"
               >
                 {tile}
               </div>

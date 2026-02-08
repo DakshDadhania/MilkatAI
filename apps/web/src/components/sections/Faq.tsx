@@ -9,7 +9,7 @@ export function Faq() {
   const { t } = useI18n();
 
   return (
-    <section id="faq" className="bg-zinc-50 py-20">
+    <section id="faq" className="py-20">
       <Container>
         <SectionHeading
           eyebrow={t.faqs.eyebrow}

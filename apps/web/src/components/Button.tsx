@@ -14,11 +14,11 @@ export function Button({
   children,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition";
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950";
   const styles =
     variant === "primary"
-      ? "bg-black text-white hover:bg-zinc-800"
-      : "border border-zinc-300 text-zinc-900 hover:border-zinc-400 hover:bg-zinc-50";
+      ? "bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 text-white shadow-lg shadow-fuchsia-500/30 hover:brightness-110"
+      : "border border-white/20 text-white/80 hover:bg-white/10";
 
   if (href) {
     return (

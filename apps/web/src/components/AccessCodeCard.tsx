@@ -38,32 +38,32 @@ export function AccessCodeCard() {
   }
 
   return (
-    <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-      <h2 className="text-lg font-semibold text-zinc-900">
+    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_-40px_rgba(14,165,233,0.45)] backdrop-blur">
+      <h2 className="text-lg font-semibold text-white">
         {t.app.dashboard.whatsappTitle}
       </h2>
-      <p className="mt-2 text-sm text-zinc-600">
+      <p className="mt-2 text-sm text-slate-300">
         {t.app.dashboard.whatsappDesc}
       </p>
       <button
         type="button"
         onClick={handleGenerate}
         disabled={loading}
-        className="mt-4 rounded-full bg-black px-5 py-2 text-xs font-semibold text-white hover:bg-zinc-800 disabled:opacity-60"
+        className="mt-4 rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 px-5 py-2 text-xs font-semibold text-white shadow-lg shadow-fuchsia-500/30 transition hover:brightness-110 disabled:opacity-60"
       >
         {loading ? "Generating..." : t.app.dashboard.whatsappButton}
       </button>
       {code ? (
-        <div className="mt-4 rounded-2xl border border-dashed border-zinc-200 p-4 text-sm text-zinc-700">
-          Code: <span className="font-semibold text-zinc-900">{code}</span>
+        <div className="mt-4 rounded-2xl border border-dashed border-white/20 bg-white/5 p-4 text-sm text-slate-200">
+          Code: <span className="font-semibold text-white">{code}</span>
           {expiresAt ? (
-            <p className="mt-1 text-xs text-zinc-500">
+            <p className="mt-1 text-xs text-slate-400">
               Expires at {new Date(expiresAt).toLocaleString()}
             </p>
           ) : null}
         </div>
       ) : null}
-      {error ? <p className="mt-3 text-xs text-red-600">{error}</p> : null}
+      {error ? <p className="mt-3 text-xs text-rose-300">{error}</p> : null}
     </div>
   );
 }

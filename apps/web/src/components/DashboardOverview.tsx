@@ -13,17 +13,19 @@ export function DashboardOverview({ status }: DashboardOverviewProps) {
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-12">
-      <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-        <h1 className="text-2xl font-semibold text-zinc-900">
+      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_30px_80px_-40px_rgba(56,189,248,0.5)] backdrop-blur">
+        <h1 className="text-2xl font-semibold text-white">
           {t.app.dashboard.title}
         </h1>
-        <p className="mt-2 text-sm text-zinc-600">
+        <p className="mt-2 text-sm text-slate-300">
           {t.app.dashboard.statusLabel}:{" "}
-          <span className="font-semibold text-zinc-900">{status}</span>
+          <span className="font-semibold text-white">{status}</span>
         </p>
         <div className="mt-6">
           {status === "active" ? (
-            <p className="text-sm text-green-600">{t.app.dashboard.activeNote}</p>
+            <p className="text-sm text-emerald-300">
+              {t.app.dashboard.activeNote}
+            </p>
           ) : (
             <PaymentButton />
           )}
